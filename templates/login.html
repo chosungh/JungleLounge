@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/login.css">
     <title>로그인</title>
 </head>
 <body>
-    <div class="signin-container">
+    <div class="login-container">
         <h1>로그인</h1>
-        <form class="signin-form">
+        <form class="login-form">
             <input type="text" placeholder="아이디">
             <input type="password" placeholder="비밀번호">
-            <p>아직 회원이 아니신가요? <a href="SignIn.html">회원가입</a></p>
+            <label style="color: red;" id="error">error</label>
+            <label>아직 회원이 아니신가요? <a href="SignIn.html">회원가입</a></label>
             <button type="submit">로그인</button>
         </form>
+        
+        
     </div>
 </body>
 </html>

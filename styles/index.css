@@ -1,0 +1,85 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+
+*{
+    font-family: pretendard;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    padding: 20px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 48px;
+}
+
+.login-status {
+    margin-left: auto;
+}
+
+.body{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2%;
+}
+
+.main-notify{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+    box-shadow: rgba(0, 2, 0, 0.1) 0px 4px 12px;
+}
+
+.main-notify-header button{
+
+}
+
+.user-information-box-list{
+    flex:5;
+    flex-wrap: wrap;        
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: rgba(0, 2, 0, 0.1) 0px 4px 12px;
+}
+
+.user-information-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-information-box-img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
