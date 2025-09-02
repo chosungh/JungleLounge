@@ -4,6 +4,13 @@
     font-family: pretendard;
 }
 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .header {
     display: flex;
     padding: 20px;
@@ -77,3 +84,28 @@
     object-fit: cover;
 }
 
+.signin-container{
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 16px;
+    box-shadow: rgba(0, 2, 0, 0.1) 0px 4px 12px;
+}
+
+.signin-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.signin-form input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signin-form button{
+}
