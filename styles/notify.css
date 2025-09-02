@@ -9,9 +9,11 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #000000;
 }
 
 .notify-container {
+    color: #ffffff;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -20,7 +22,16 @@ body{
     padding: 20px;
     gap: 20px;
     border-radius: 16px;
-    box-shadow: rgba(0, 2, 0, 0.1) 0px 4px 12px;
+    border: 1px solid #04D182;
+    box-shadow: rgba(0, 192, 2, 0.3) 0px 4px 12px;
+}
+
+input{
+    background-color: #6d6d6d;
+    border: 1px solid #ccc;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .notify-title {
@@ -36,6 +47,23 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.my-notify-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.my-notify-info textarea{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #6d6d6d;
+    border: 1px solid #ccc;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .my-notify-peoples {
