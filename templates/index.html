@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="body">
+        <div class="header">
+            <div class="my-notify-button" id="MyNofityButton" style="display: none;">
+                <button type="button">내 모임</button>
+            </div>
+            
+            <h1>정글위키</h1>
+            <div class="login-status">
+                <button type="button" id="LoginButton">로그인 / 회원가입</button>
+                <p id="WelcomeText" style="display: none;">환영합니다. 홍길동님</p>
+                <button type="button" id="logoutButton" style="display: none;">로그아웃</button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-notify">
+                <div class="main-notify-header">
+                    <h1>모임공고</h1>
+                    <button type="button" id="AddButton" style="display: none;">+</button>
+                </div>
+                
+                <div>
+                    <p>모임공고입니다.</p>
+                </div>
+            </div>
+            <div class="user-information-box-list">
+                <div class="user-information-box">
+                    <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt="" class="user-information-box-img">
+                    <p>홍길동</p>
+                </div>
+                <div class="user-information-box">
+                    <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt="" class="user-information-box-img">
+                    <p>홍길동</p>
+                </div>
+                <div class="user-information-box">
+                    <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt="" class="user-information-box-img">
+                    <p>홍길동</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+            <script>
+            // 로그인 상태 (실제로는 서버에서 확인)
+            let isLoggedIn = false;
+            
+            // DOM 요소들
+            const MyNotifyButton = document.getElementById('MyNofityButton');
+            const AddButton = document.getElementById('AddButton');
+            const LoginButton = document.getElementById('LoginButton');
+            const WelcomeText = document.getElementById('WelcomeText');
+            const LogoutButton = document.getElementById('logoutButton');
+            
+            // 로그인 상태에 따라 요소들 표시/숨김
+            function updateLoginState() {
+                if (isLoggedIn) {
+                    // 로그인된 상태
+                    MyNotifyButton.style.display = 'block';
+                    AddButton.style.display = 'block';
+                    LoginButton.style.display = 'none';
+                    WelcomeText.style.display = 'block';
+                    LogoutButton.style.display = 'block';
+                } else {
+                    // 로그아웃된 상태
+                    MyNotifyButton.style.display = 'none';
+                    AddButton.style.display = 'none';
+                    LoginButton.style.display = 'block';
+                    WelcomeText.style.display = 'none';
+                    LogoutButton.style.display = 'none';
+                }
+            }
+            
+            // 로그인 버튼 클릭 이벤트
+            LoginButton.addEventListener('click', function() {
+                isLoggedIn = true;
+                updateLoginState();
+            });
+            
+            // 로그아웃 버튼 클릭 이벤트
+            LogoutButton.addEventListener('click', function() {
+                isLoggedIn = false;
+                updateLoginState();
+            });
+            
+            // 초기 상태 설정
+            updateLoginState();
+        </script>
+</body>
+</html>
