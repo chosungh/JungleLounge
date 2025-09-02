@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="body">
+        <div class="header">
+            <div class="my-notify-button" id="MyNofityButton">
+                <button type="button" class="my-notify-button-button">내 모임</button>
+            </div>
+            <h1>정글위키</h1>
+            <div class="login-status">
+                <p id="WelcomeText"></p>
+                <a href="{{ url_for('auth_api.api_logout') }}" style="text-decoration: none;">
+                    <button type="button" id="logoutButton">로그아웃</button>
+                </a>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-notify">
+                <div class="main-notify-header">
+                    <h1>모임공고</h1>
+                    <button type="button" id="AddButton" style="display: none;">+</button>
+                </div>
+                <div>
+                    <p>모임공고입니다.</p>
+                </div>
+            </div>
+            <div class="user-information-box-list">
+                <div class="user-information-box">
+                    <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt="" class="user-information-box-img">
+                    <p>홍길동</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    async function check_auth() {
+      const res = await fetch("{{ url_for('auth_api.api_auth') }}", { method: "GET", credentials: "include" });
+      if (!res.ok) return null;
+      return res.json();
+    }
+
+    (async () => {
+      const data = await check_auth();
+      if (data) {
+        document.getElementById("WelcomeText").textContent =
+          `환영합니다. ${data.UserName}님`;
+      }
+    })();
+</script>
+</html>

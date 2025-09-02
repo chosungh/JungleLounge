@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>회원가입</title>
+</head>
+<body>
+    <div class="signin-container">
+        <h1>회원가입</h1>
+        <form class="signin-form" method="POST" action="{{ url_for('auth_api.api_signup') }}">
+            <input name="UserName" type="text" placeholder="이름">
+            <input name="UserId" placeholder="아이디">
+            <input name="UserEmail" type="email" placeholder="이메일">
+            <input name="UserPassword" type="password" placeholder="비밀번호">
+            <input name="UserRePassword" type="password" placeholder="비밀번호 확인">
+            <p>이미 회원이신가요? <a href="{{ url_for('auth_views.view_login') }}">로그인</a></p>
+            <button type="submit">회원가입</button>
+        </form>
+    </div>
+</body>
+</html>
