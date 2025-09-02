@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>정글 라운지 | Jungle Lounge</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add" />
 </head>
 <body>
     <div class="body">
@@ -24,7 +25,11 @@
             <div class="main-notify">
                 <div class="main-notify-header">
                     <h1>모임공고</h1>
-                    <button type="button" id="AddButton" style="display: block;">+</button>
+                    <button type="button" id="AddButton" style="display: block;">
+                        <span class="material-symbols-outlined">
+                            add
+                        </span>
+                    </button>
                 </div>
                 <div class="notifys-list">
                     <div class="notify-list-item">
