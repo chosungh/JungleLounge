@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <title>정글 라운지 | Jungle Lounge</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -12,7 +12,7 @@
             <div class="my-notify-button" id="MyNofityButton">
                 <button type="button" class="my-notify-button-button">내 모임</button>
             </div>
-            <h1>정글위키</h1>
+            <h1>Jungle Lounge</h1>
             <div class="login-status">
                 <p id="WelcomeText"></p>
                 <a href="{{ url_for('auth_api.api_logout') }}" style="text-decoration: none;">
@@ -24,13 +24,58 @@
             <div class="main-notify">
                 <div class="main-notify-header">
                     <h1>모임공고</h1>
-                    <button type="button" id="AddButton" style="display: none;">+</button>
+                    <button type="button" id="AddButton" style="display: block;">+</button>
                 </div>
-                <div>
-                    <p>모임공고입니다.</p>
+                <div class="notifys-list">
+                    <div class="notify-list-item">
+                        <p>모임공고입니다.</p>
+                        <div class="item-info">
+                            <p>2025-01-01까지</p>
+                            <p>현재인원: 4명</p>
+                        </div>
+                    </div>
+                    <div class="notify-list-item">
+                        <p>모임공고입니다.</p>
+                        <div class="item-info">
+                            <p>2025-01-01까지</p>
+                            <p>현재인원: 4명</p>
+                        </div>
+                    </div>
+                    <div class="notify-list-item">
+                        <p>모임공고입니다.</p>
+                        <div class="item-info">
+                            <p>2025-01-01까지</p>
+                            <p>현재인원: 4명</p>
+                        </div>
+                    </div>
+
+                    <div class="notify-list-item">
+                        <p>모임공고입니다.</p>
+                        <div class="item-info">
+                            <p>2025-01-01까지</p>
+                            <p>현재인원: 4명</p>
+                        </div>
+                    </div>
+                    <div class="notify-list-item">
+                        <p>모임공고입니다.</p>
+                        <div class="item-info">
+                            <p>2025-01-01까지</p>
+                            <p>현재인원: 4명</p>
+                        </div>
+                    </div>
+                    
+                    
                 </div>
             </div>
             <div class="user-information-box-list">
+                <div class="user-information-box">
+                    <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt="" class="user-information-box-img">
+                    <p>홍길동</p>
+                </div>
+                <div class="user-information-box">
+                    <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt="" class="user-information-box-img">
+                    <p>홍길동</p>
+                </div>
                 <div class="user-information-box">
                     <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg" alt="" class="user-information-box-img">
                     <p>홍길동</p>
